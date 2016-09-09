@@ -27,21 +27,3 @@ function watch(done) {
   gulp.watch(conf.path.src('app/**/*.html'), reloadBrowserSync);
   done();
 }
-
-var connect = require("gulp-connect");
-gulp.task('server', function(){
-  connect.server({
-    root: ['.'],
-    port: 3002,
-    livereload: true,
-    middleware: function(connect, o) {
-      return [ (function() {
-          var url = require('url');
-          var proxy = require('proxy-middleware');
-          var options = url.parse('http://185.76.104.110:8080/api');
-          options.route = '/api';
-          return proxy(options);
-      })() ];
-    }
-  });
-});
