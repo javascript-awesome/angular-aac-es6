@@ -5,7 +5,7 @@ import about from './about/about'
 import dashboard from './dashboard/dashboard'
 
 
-export const componentsModule = 'myApp.components';
+export const componentsModule = 'app.components';
 
 angular
     .module(componentsModule, [])
