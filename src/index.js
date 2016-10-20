@@ -10,6 +10,7 @@ import httpInterceptorConfig from './configs/httpInterceptor.config';
 // CUSTOM MODULES
 import {componentsModule} from './app/components';
 import commonModule from './app/common';
+import aboutModule from './app/about';
 import {techsModule} from './app/techs';
 
 // MAIN COMPONENT
@@ -28,6 +29,7 @@ angular
     // CUSTOM MODULES
     componentsModule,
     commonModule.name,
+    aboutModule.name,
     techsModule
   ])
   .config(routesConfig)
