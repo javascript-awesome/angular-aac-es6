@@ -8,9 +8,9 @@ import routesConfig from './routes';
 import httpInterceptorConfig from './configs/httpInterceptor.config';
 
 // CUSTOM MODULES
-import {componentsModule} from './app/components';
 import commonModule from './app/common';
 import aboutModule from './app/about';
+import dashboardModule from './app/dashboard';
 import {techsModule} from './app/techs';
 
 // MAIN COMPONENT
@@ -27,7 +27,7 @@ angular
     uiBootstrap,
 
     // CUSTOM MODULES
-    componentsModule,
+    dashboardModule.name,
     commonModule.name,
     aboutModule.name,
     techsModule
