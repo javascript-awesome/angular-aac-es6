@@ -1,11 +1,16 @@
 import angular from 'angular';
 
-import {tech} from './tech';
-import {techs} from './techs';
+// components
+import techItem from './components/techItem/techItem.component';
+import techs from './components/techs/techs.component';
 
-export const techsModule = 'techs';
+// services
+import Tech from './services/tech.service'
 
-angular
-  .module(techsModule, [])
-  .component('fountainTech', tech)
-  .component('fountainTechs', techs);
+
+export default angular
+  .module('app.techs', [])
+  .component('techItem', techItem)
+  .component('techs', techs)
+  .service('Tech', Tech)
+;

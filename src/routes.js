@@ -23,7 +23,7 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
     })
     .state('app.techs', {
       url: 'techs',
-      component: 'fountainTechs'
+      component: 'techs'
     })
 
 }

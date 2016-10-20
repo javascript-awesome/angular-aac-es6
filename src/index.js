@@ -11,7 +11,7 @@ import httpInterceptorConfig from './configs/httpInterceptor.config';
 import commonModule from './app/common';
 import aboutModule from './app/about';
 import dashboardModule from './app/dashboard';
-import {techsModule} from './app/techs';
+import techsModule from './app/techs';
 
 // MAIN COMPONENT
 import main from './app/main/main.component'
@@ -30,7 +30,7 @@ angular
     dashboardModule.name,
     commonModule.name,
     aboutModule.name,
-    techsModule
+    techsModule.name
   ])
   .config(routesConfig)
   .config(httpInterceptorConfig)
