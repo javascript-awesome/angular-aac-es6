@@ -68,19 +68,21 @@ module.exports = {
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.NoErrorsPlugin(),
     new HtmlWebpackPlugin({
-      template: conf.path.src('index.html'),
-      inject: true
+      template: conf.path.src('index.html')
     }),
     new webpack.optimize.UglifyJsPlugin({
-      compress: {unused: true, dead_code: true} // eslint-disable-line camelcase
+      compress: {unused: true, dead_code: true, warnings: false} // eslint-disable-line camelcase
     }),
-    new ExtractTextPlugin('index-[contenthash].css')
+    new ExtractTextPlugin('index-[contenthash].css'),
+    new webpack.optimize.CommonsChunkPlugin({name: 'vendor'})
   ],
   postcss: () => [autoprefixer],
   output: {
     path: path.join(process.cwd(), conf.paths.dist),
     filename: '[name]-[hash].js'
   },
-  entry: `./${conf.path.src('app/index')}`
-
+  entry: {
+    app: `./${conf.path.src('index')}`
+    // vendor: Object.keys(pkg.dependencies)
+  }
 };

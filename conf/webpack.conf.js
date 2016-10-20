@@ -7,6 +7,14 @@ const autoprefixer = require('autoprefixer');
 
 module.exports = {
   module: {
+    /*preLoaders: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'eslint'
+      }
+    ],*/
+
     loaders: [
       {
         test: /.json$/,
@@ -42,7 +50,7 @@ module.exports = {
           'babel'
         ]
       },
-      // Loader to importing HTML file and using it as template
+      // Loader to import HTML file and using it as template
       {
         test: /.html$/,
         loaders: [
@@ -64,16 +72,15 @@ module.exports = {
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.NoErrorsPlugin(),
     new HtmlWebpackPlugin({
-      template: conf.path.src('index.html'),
-      inject: true
+      template: conf.path.src('index.html')
     })
   ],
   postcss: () => [autoprefixer],
   debug: true,
-  devtool: 'cheap-module-eval-source-map',
+  devtool: 'source-map',
   output: {
     path: path.join(process.cwd(), conf.paths.tmp),
     filename: 'index.js'
   },
-  entry: `./${conf.path.src('app/index')}`
+  entry: `./${conf.path.src('index')}`
 };

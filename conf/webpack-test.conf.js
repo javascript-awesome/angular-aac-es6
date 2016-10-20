@@ -1,8 +1,3 @@
-// TODO
-// this file is left original,
-// before using it make sure to add all loaders here
-
-
 module.exports = {
   module: {
     preLoaders: [
@@ -33,15 +28,10 @@ module.exports = {
         loaders: [
           'html'
         ]
-      },
-      {
-        test: /\.js$/,
-        exclude: /(node_modules|.*\.spec\.js)/,
-        loader: 'isparta'
       }
     ]
   },
   plugins: [],
   debug: true,
-  devtool: 'cheap-module-eval-source-map'
+  devtool: 'source-map'
 };
