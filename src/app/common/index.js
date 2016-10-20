@@ -1,11 +1,10 @@
 import angular from 'angular';
 
-import footer from './footer/footer'
-import navbar from '../common/navbar/navbar'
+import footer from './components/footer/footer.component'
+import navbar from './components/navbar/navbar.component'
 
-export const commonModule = 'app.common';
 
-angular
-    .module(commonModule, [])
-    .component('myFooter', footer)
-    .component('navbar', navbar);
+export default angular
+  .module('app.common', [])
+  .component('myFooter', footer)
+  .component('navbar', navbar);
