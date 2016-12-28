@@ -1,3 +1,5 @@
+import template from './navbar.html';
+
 export default {
-  template: require('./navbar.html')
+  template
 };

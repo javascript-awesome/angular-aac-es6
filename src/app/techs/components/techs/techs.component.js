@@ -1,18 +1,8 @@
 import './techs.scss'
-
-class Ctrl {
-  /** @ngInject */
-  constructor(Tech) {
-    // DI
-    this.Tech = Tech;
-  }
-
-  $onInit() {
-    this.Tech.getList().then(list => this.list = list);
-  }
-}
+import template from './techs.html';
+import controller from './techs.controller';
 
 export default {
-  template: require('./techs.html'),
-  controller: Ctrl
+  template,
+  controller
 };

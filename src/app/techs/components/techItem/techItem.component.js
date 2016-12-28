@@ -1,7 +1,8 @@
 import './techItem.scss';
+import template from './techItem.html';
 
 export default {
-  template: require('./techItem.html'),
+  template,
   bindings: {
     data: '<'
   }
