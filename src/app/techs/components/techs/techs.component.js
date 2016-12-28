@@ -1,5 +1,5 @@
 import './techs.scss'
-import template from './techItem.html';
+import template from './techs.html';
 import controller from './techs.controller';
 
 export default {
