@@ -1,3 +1,5 @@
+import template from './dashboard.html';
+
 export default {
-  template: require('./dashboard.html')
+  template: template
 };

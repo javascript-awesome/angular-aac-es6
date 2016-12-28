@@ -1,3 +1,5 @@
+import template from './main.html';
+
 export default {
-  template: require('./main.html')
+  template: template
 };
