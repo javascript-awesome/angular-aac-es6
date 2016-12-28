@@ -8,4 +8,4 @@ export class Ctrl {
   $onInit() {
     this.Tech.getList().then(list => this.list = list);
   }
-}
+};
