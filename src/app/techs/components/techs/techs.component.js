@@ -3,6 +3,6 @@ import template from './techs.html';
 import controller from './techs.controller';
 
 export default {
-  template: template,
-  controller: controller
+  template,
+  controller
 };

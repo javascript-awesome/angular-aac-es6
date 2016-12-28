@@ -1,4 +1,4 @@
-export class Ctrl {
+export default class Ctrl {
   /** @ngInject */
   constructor(Tech) {
     // DI
