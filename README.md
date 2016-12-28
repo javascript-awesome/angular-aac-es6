@@ -36,7 +36,7 @@ of `AngularJS 1.x` and `ES6` and `Webpack (or any other module bundler)`
 import template from './footer.html'
 
 let myComponent = {
-    template: template
+    template
 }
 ```
 
