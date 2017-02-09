@@ -2,7 +2,7 @@ export default authInterceptor;
 
 /** @ngInject */
 function authInterceptor($httpProvider) {
-  $httpProvider.interceptors.push(($q, $state) => {
+  $httpProvider.interceptors.push(($q) => {
     return {
       responseError(response) {
         const {status} = response;

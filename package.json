@@ -1,23 +1,26 @@
 {
+  "scripts": {
+    "dev": "webpack-dev-server --inline --port 8080 --config webpack/webpack.dev.config.js",
+    "first-start": "npm install && npm run dev",
+    "build": "webpack --config webpack/webpack.common.config.js",
+    "test": "karma start ./webpack/karma.conf.js"
+  },
   "dependencies": {
-    "angular": "^1.5.8",
-    "angular-ui-bootstrap": "^2.1.3",
+    "angular": "^1.6.1",
+    "angular-ui-bootstrap": "^2.3.1",
     "angular-ui-router": "1.0.0-beta.1",
     "bootstrap-sass": "^3.3.7"
   },
   "devDependencies": {
     "angular-mocks": "^1.5.0-beta.2",
-    "autoprefixer": "^6.2.2",
     "babel-core": "^6.13.0",
     "babel-eslint": "^6.0.2",
     "babel-loader": "^6.2.0",
     "babel-plugin-istanbul": "^2.0.1",
     "babel-polyfill": "^6.7.4",
     "babel-preset-es2015": "^6.2.0",
-    "browser-sync": "^2.9.11",
-    "browser-sync-spa": "^1.0.3",
+    "copy-webpack-plugin": "^3.0.1",
     "css-loader": "^0.23.1",
-    "del": "^2.0.2",
     "es6-shim": "^0.35.0",
     "eslint": "^3.2.2",
     "eslint-config-angular": "^0.5.0",
@@ -25,25 +28,14 @@
     "eslint-loader": "^1.3.0",
     "eslint-plugin-angular": "^1.3.0",
     "eslint-plugin-babel": "^3.1.0",
-    "extract-text-webpack-plugin": "^2.0.0-beta.3",
+    "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.9.0",
-    "gulp": "gulpjs/gulp#4ed9a4a3275559c73a396eff7e1fde3824951ebb",
-    "gulp-angular-filesort": "^1.1.1",
-    "gulp-angular-templatecache": "^1.8.0",
-    "gulp-filter": "^4.0.0",
-    "gulp-htmlmin": "^1.3.0",
-    "gulp-hub": "frankwallis/gulp-hub#d461b9c700df9010d0a8694e4af1fb96d9f38bf4",
-    "gulp-insert": "^0.5.0",
-    "gulp-ng-annotate": "^1.1.0",
-    "gulp-sass": "^2.1.1",
-    "gulp-util": "^3.0.7",
     "html-loader": "^0.4.3",
     "html-webpack-plugin": "^2.9.0",
-    "imports-loader": "^0.6.5",
-    "jasmine": "^2.4.1",
-    "json-loader": "^0.5.4",
+    "jasmine-core": "^2.5.2",
     "karma": "^1.3.0",
     "karma-angular-filesort": "^1.0.0",
+    "karma-babel-preprocessor": "^6.0.1",
     "karma-coverage": "^1.1.1",
     "karma-jasmine": "^1.0.2",
     "karma-junit-reporter": "^1.1.0",
@@ -53,32 +45,13 @@
     "karma-webpack": "^1.7.0",
     "ng-annotate-loader": "^0.0.10",
     "node-sass": "^3.4.2",
-    "phantomjs-prebuilt": "^2.1.6",
-    "postcss-loader": "^0.8.0",
-    "proxy-middleware": "^0.15.0",
+    "phantomjs": "^2.1.7",
+    "raw-loader": "^0.5.1",
     "sass-loader": "^3.1.2",
     "style-loader": "^0.13.0",
     "url-loader": "^0.5.7",
-    "webpack": "2.1.0-beta.20"
-  },
-  "scripts": {
-    "build": "gulp",
-    "serve": "gulp serve",
-    "serve:dist": "gulp serve:dist",
-    "test": "gulp test",
-    "test:auto": "gulp test:auto"
-  },
-  "eslintConfig": {
-    "globals": {
-      "expect": true
-    },
-    "root": true,
-    "env": {
-      "browser": true,
-      "jasmine": true
-    },
-    "extends": [
-      "xo-space/esnext"
-    ]
+    "webpack": "2.1.0-beta.20",
+    "webpack-dev-server": "^1.14.1",
+    "webpack-merge": "0.14.1"
   }
 }
