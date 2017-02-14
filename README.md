@@ -9,16 +9,15 @@ Make sure you have globally installed latest versions of [NodeJS](https://nodejs
 * NPM 3+
 
 Make sure you have globally installed latest versions of such NPM modules:
-* Gulp 4
 * webpack
 
 ## Install
 Run `npm install` to download all dependencies
 
 ## Usage - Development
-Run `npm run serve` to start watcher and local server. Follow console messages.
+Run `npm run dev` to start watcher and local server. Follow console messages.
 
-In case of error, make sure you have latest version of Gulp installed
+Now browse to the app at `http://localhost:8080/`
 
 
 ## Usage - Production
@@ -53,12 +52,6 @@ module: {
         },
         // ...
 ```
-
----
-
-A recommendation is to use second variant. If you are sure that first variant is not used anywhere then
-you may also remove Gulp's `partials` task in order to get rid of unused templates.
-
 
 ## Modules
 ### External modules

@@ -4,21 +4,20 @@ import uiRouter from 'angular-ui-router';
 import uiBootstrap from 'angular-ui-bootstrap';
 
 // CONFIGS
-import routesConfig from './routes';
-import httpInterceptorConfig from './configs/httpInterceptor.config';
+import routesConfig from './app.routes.config';
+import httpInterceptorConfig from './app.httpInterceptor.config';
 
 // CUSTOM MODULES
-import commonModule from './app/common';
-import aboutModule from './app/about';
-import dashboardModule from './app/dashboard';
-import techsModule from './app/techs';
+import commonModule from './common/common.module';
+import aboutModule from './about/about.module';
+import dashboardModule from './dashboard/dashboard.module';
+import techsModule from './techs/techs.module';
 
 // MAIN COMPONENT
-import main from './app/main/main.component'
+import main from './main/main.component'
 
 // STYLES
-import './index.scss';
-
+import './app.scss';
 
 angular
   .module('app', [
@@ -34,5 +33,4 @@ angular
   ])
   .config(routesConfig)
   .config(httpInterceptorConfig)
-  .component('main', main)
-;
+  .component('main', main);
