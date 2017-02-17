@@ -27,4 +27,3 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
     })
 
 }
-
